@@ -25,7 +25,7 @@ export default {
   methods: {
     async login(event) {
       event.preventDefault();
-      await fetch('http://localhost:3000/auth/login', {
+      await fetch('https://todo-api-backend-j1gw.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

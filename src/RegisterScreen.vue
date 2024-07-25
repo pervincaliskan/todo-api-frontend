@@ -27,7 +27,7 @@ export default {
   methods: {
     async register(event) {
       event.preventDefault();
-      await fetch('http://localhost:3000/auth/register', {
+      await fetch('https://todo-api-backend-j1gw.onrender.com/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

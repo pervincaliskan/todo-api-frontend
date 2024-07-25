@@ -22,7 +22,7 @@ export default {
       this.loading = true;
       this.error = null;
       if (this.token) {
-        await fetch("http://localhost:3000/me", {
+        await fetch("https://todo-api-backend-j1gw.onrender.com/me", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${this.token}`,
@@ -49,7 +49,7 @@ export default {
       this.loading = true;
       this.error = null;
       this.todos = [];
-      return fetch("http://localhost:3000/todos/")
+      return fetch("https://todo-api-backend-j1gw.onrender.com/todos/")
         .then((response) => response.json())
         .then((data) => {
           this.todos = data.result;
@@ -72,7 +72,7 @@ export default {
           done: false,
         });
       }
-      await fetch("http://localhost:3000/todos", {
+      await fetch("https://todo-api-backend-j1gw.onrender.com/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export default {
     },
     async toggleTodoStatus(todo) {
       todo.done = !todo.done;
-      await fetch(`http://localhost:3000/todos/${todo._id}`, {
+      await fetch(`https://todo-api-backend-j1gw.onrender.com/todos/${todo._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ export default {
     },
     async removeTodo(todo) {
       this.todos = this.todos.filter((t) => t._id !== todo._id);
-      await fetch(`http://localhost:3000/todos/${todo._id}`, {
+      await fetch(`https://todo-api-backend-j1gw.onrender.com/todos/${todo._id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
