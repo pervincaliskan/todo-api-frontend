@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "postinstall": "vite build"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue": "^5.1.0",
     "axios": "^0.21.4",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0",
