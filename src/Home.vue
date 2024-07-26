@@ -133,6 +133,7 @@ export default {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
+          authorization: localStorage.getItem("token") || null,
         },
         credentials: 'include'
       }).then(async (response) => {
