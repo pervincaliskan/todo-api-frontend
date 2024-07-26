@@ -76,7 +76,7 @@ export default {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          authorization: localStorage.getItem("token") || null
+          authorization: localStorage.getItem("token") || null,
         },
         body: JSON.stringify({
           title: this.inputBox,
@@ -110,6 +110,7 @@ export default {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
+          authorization: localStorage.getItem("token") || null,
         },
         body: JSON.stringify({
           done: todo.done,
