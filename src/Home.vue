@@ -76,6 +76,7 @@ export default {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          authorization: localStorage.getItem("token") || null
         },
         body: JSON.stringify({
           title: this.inputBox,
