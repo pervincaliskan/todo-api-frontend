@@ -25,7 +25,7 @@ export default {
         await fetch("https://todo-api-backend-j1gw.onrender.com/me", {
           method: "GET",
           headers: {
-            Authorization: `Bearer ${this.token}`,
+            authorization: localStorage.getItem("token") || null,
           },
           credentials: 'include'
         }).then(async (response) => {
